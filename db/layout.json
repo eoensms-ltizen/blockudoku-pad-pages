@@ -1,0 +1,26 @@
+{
+  "monster": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "origin": "center"
+  },
+  "player": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "origin": "center"
+  },
+  "board": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "origin": "center"
+  },
+  "tray": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "origin": "center"
+  }
+}

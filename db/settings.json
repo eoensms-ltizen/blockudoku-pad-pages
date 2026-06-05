@@ -1,0 +1,19 @@
+{
+  "generatorCandidates": 24,
+  "pathPlacementLimit": 6,
+  "pathNodeBudget": 140,
+  "easyPenalty": 180,
+  "rescueBonus": 260,
+  "largePieceSafeBonus": 32,
+  "largePieceDangerPenalty": 60,
+  "pokeDamage": 24,
+  "blockDamage": 18,
+  "comboDamage": 32,
+  "comboBonus": 4,
+  "scorePerBlock": 12,
+  "scorePerCombo": 100,
+  "noComboScore": 5,
+  "monsterKillScore": 500,
+  "enemyDamage": 135,
+  "floorHpGrowth": 160
+}

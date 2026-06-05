@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mobile UI Test</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="tester-page">
+    <main class="tester-shell">
+      <header class="tester-header">
+        <div>
+          <span class="eyebrow">Preview</span>
+          <h1>모바일 UI 테스트</h1>
+        </div>
+        <a class="admin-link" href="./">게임으로</a>
+      </header>
+
+      <section class="tester-controls" aria-label="device presets">
+        <button class="admin-button secondary active" data-size="390x844" type="button">iPhone 15</button>
+        <button class="admin-button secondary" data-size="393x873" type="button">Pixel</button>
+        <button class="admin-button secondary" data-size="360x800" type="button">Small</button>
+        <button class="admin-button secondary" data-size="430x932" type="button">Large</button>
+        <button id="reloadPreviewButton" class="admin-button" type="button">새로고침</button>
+      </section>
+
+      <section class="phone-stage">
+        <div id="phoneFrame" class="phone-frame" style="--phone-width: 390px; --phone-height: 844px">
+          <iframe id="mobilePreview" title="mobile game preview" src="./?view=mobile"></iframe>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const frame = document.querySelector("#phoneFrame");
+      const preview = document.querySelector("#mobilePreview");
+      const reloadButton = document.querySelector("#reloadPreviewButton");
+
+      document.querySelectorAll("[data-size]").forEach((button) => {
+        button.addEventListener("click", () => {
+          document.querySelectorAll("[data-size]").forEach((item) => item.classList.remove("active"));
+          button.classList.add("active");
+          const [width, height] = button.dataset.size.split("x");
+          frame.style.setProperty("--phone-width", `${width}px`);
+          frame.style.setProperty("--phone-height", `${height}px`);
+        });
+      });
+
+      reloadButton.addEventListener("click", () => {
+        preview.src = "./?view=mobile&preview=" + Date.now();
+      });
+    </script>
+  </body>
+</html>

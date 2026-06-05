@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blockudoku Dragon</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button id="viewToggleButton" class="view-toggle" type="button">Mobile UI</button>
+
+    <main class="app-shell">
+      <section class="battlefield" aria-label="battle">
+        <div class="enemy-panel">
+          <div class="enemy-portrait" aria-hidden="true">
+            <div class="player-layer">
+              <span id="playerSprite" class="player-sprite" aria-hidden="true"></span>
+            </div>
+            <div class="monster-layer">
+              <span id="enemySprite" class="enemy-sprite" aria-hidden="true"></span>
+            </div>
+            <div class="scene-effect-layer scene-effect-front">
+              <div class="hit-burst"></div>
+            </div>
+          </div>
+
+          <div class="mobile-monster-hud" aria-label="mobile battle info">
+            <div class="hud-chip top-left">
+              <span id="mobileFloorText">Floor 1</span>
+              <strong id="mobileEnemyName">Crimson Guardian</strong>
+            </div>
+            <div class="hud-chip top-right">
+              <span>Enemy</span>
+              <strong id="mobileEnemyHpText">1200 / 1200</strong>
+            </div>
+            <div class="hud-chip bottom-left">
+              <span>Player</span>
+              <strong id="mobilePlayerHpText">1000 / 1000</strong>
+            </div>
+            <div class="hud-chip bottom-right">
+              <span id="mobileTurnText">Next attack: 3</span>
+              <strong><span id="mobileScoreText">0</span> pts</strong>
+            </div>
+          </div>
+
+          <div class="enemy-info">
+            <div id="floorText" class="eyebrow">Floor 1</div>
+            <h1 id="enemyName">Crimson Guardian</h1>
+            <div class="hp-track" aria-label="Enemy HP">
+              <div id="enemyHpBar" class="hp-fill enemy"></div>
+            </div>
+            <div class="enemy-stats">
+              <span id="enemyHpText">1200 / 1200</span>
+              <span id="turnText">Next attack: 3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-row" aria-label="team">
+          <button class="hero-card fire" data-skill="fire" type="button">
+            <span class="hero-icon">F</span>
+            <span>Flare</span>
+            <small id="fireSkill">Ready</small>
+          </button>
+          <button class="hero-card water" data-skill="water" type="button">
+            <span class="hero-icon">W</span>
+            <span>Tide</span>
+            <small id="waterSkill">Ready</small>
+          </button>
+          <button class="hero-card wood" data-skill="wood" type="button">
+            <span class="hero-icon">L</span>
+            <span>Leaf</span>
+            <small id="woodSkill">Ready</small>
+          </button>
+          <button class="hero-card light" data-skill="light" type="button">
+            <span class="hero-icon">S</span>
+            <span>Spark</span>
+            <small id="lightSkill">Ready</small>
+          </button>
+          <button class="hero-card dark" data-skill="dark" type="button">
+            <span class="hero-icon">D</span>
+            <span>Dusk</span>
+            <small id="darkSkill">Ready</small>
+          </button>
+        </div>
+      </section>
+
+      <section class="game-table" aria-label="blockudoku board">
+        <div class="status-bar">
+          <div>
+            <span class="eyebrow">Player HP</span>
+            <div class="player-hp">
+              <div id="playerHpBar" class="hp-fill player"></div>
+            </div>
+          </div>
+          <strong id="playerHpText">1000 / 1000</strong>
+          <button id="newGameButton" class="icon-button" type="button" title="새 게임">↻</button>
+        </div>
+
+        <div id="board" class="board" aria-label="9 by 9 board"></div>
+
+        <div class="tray-header">
+          <div>
+            <span class="eyebrow">Blockudoku Turn</span>
+            <h2>조각을 끌어 보드에 놓고 공격하세요</h2>
+          </div>
+          <div id="comboBadge" class="combo-badge">0 combo</div>
+        </div>
+
+        <div id="pieceTray" class="piece-tray" aria-label="available pieces"></div>
+      </section>
+
+      <aside class="log-panel" aria-label="battle log">
+        <div class="score-grid">
+          <div>
+            <span class="eyebrow">Score</span>
+            <strong id="scoreText">0</strong>
+          </div>
+          <div>
+            <span class="eyebrow">Damage</span>
+            <strong id="damageText">0</strong>
+          </div>
+        </div>
+        <div class="rules">
+          <span class="eyebrow">Rules</span>
+          <p>행, 열, 3x3 박스를 지우면 콤보가 생기고 몬스터에게 피해를 줍니다.</p>
+        </div>
+        <ol id="battleLog" class="battle-log"></ol>
+      </aside>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

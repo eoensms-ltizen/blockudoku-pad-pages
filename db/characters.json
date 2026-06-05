@@ -1,0 +1,125 @@
+[
+  {
+    "id": "character-1780504344080-14qqm",
+    "name": "Flame Dragon Test",
+    "role": "monster",
+    "imageUrl": "assets/monsters/sprite_sheet_256x197_monster_fire.png",
+    "hp": 1200,
+    "turns": 3,
+    "themeA": "#ff6540",
+    "themeB": "#7fd0ff",
+    "active": false,
+    "animations": [
+      {
+        "name": "idle",
+        "columns": 8,
+        "rows": 8,
+        "frames": 61,
+        "frameMs": 70,
+        "mode": "pingpong",
+        "frameWidth": 256,
+        "frameHeight": 197,
+        "scale": 1,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      {
+        "name": "damage",
+        "columns": 8,
+        "rows": 8,
+        "frames": 12,
+        "frameMs": 55,
+        "mode": "once",
+        "frameWidth": 256,
+        "frameHeight": 197,
+        "scale": 1,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    ]
+  },
+  {
+    "id": "monster-fire-colossus-235x256",
+    "name": "Fire Colossus Test",
+    "role": "monster",
+    "imageUrl": "assets/monsters/fire_sprite_sheet_235x256_keyed.png",
+    "hp": 1200,
+    "turns": 3,
+    "themeA": "#ff6540",
+    "themeB": "#7fd0ff",
+    "active": true,
+    "animations": [
+      {
+        "name": "idle",
+        "imageUrl": "assets/monsters/fire_sprite_sheet_235x256_keyed.png",
+        "columns": 10,
+        "rows": 7,
+        "frames": 49,
+        "startFrame": 12,
+        "frameMs": 125,
+        "mode": "pingpong",
+        "frameWidth": 235,
+        "frameHeight": 256,
+        "scale": 1,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      {
+        "name": "damage",
+        "imageUrl": "assets/monsters/fire_sprite_sheet_235x256_keyed.png",
+        "columns": 10,
+        "rows": 7,
+        "frames": 12,
+        "startFrame": 12,
+        "frameMs": 80,
+        "mode": "once",
+        "frameWidth": 235,
+        "frameHeight": 256,
+        "scale": 1,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      {
+        "name": "attack",
+        "imageUrl": "assets/monsters/fire_attack1_sprite_sheet_235x256_keyed.png",
+        "columns": 10,
+        "rows": 7,
+        "frames": 61,
+        "startFrame": 0,
+        "frameMs": 55,
+        "mode": "once",
+        "frameWidth": 235,
+        "frameHeight": 256,
+        "scale": 1,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    ]
+  },
+  {
+    "id": "character-1780507975310-8ncsa",
+    "name": "Player Back Test",
+    "role": "player",
+    "imageUrl": "assets/characters/sprite_sheet_186x257_back_idle2-1780507894227.png",
+    "hp": 1200,
+    "turns": 3,
+    "themeA": "#ff6540",
+    "themeB": "#7fd0ff",
+    "active": true,
+    "animations": [
+      {
+        "name": "idle",
+        "columns": 15,
+        "rows": 5,
+        "frames": 61,
+        "frameMs": 70,
+        "mode": "pingpong",
+        "frameWidth": 186,
+        "frameHeight": 257,
+        "scale": 1,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    ]
+  }
+]
